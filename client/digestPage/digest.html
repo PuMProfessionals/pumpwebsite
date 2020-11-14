@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   <title>Prospective Medical Professionals</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+   <meta http-equiv="refresh" content="30">
+   <link rel="stylesheet" href="assets/css/main.css" />
+   <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+   <link rel="icon" href="images/Icon@1000px.png">
+   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+<body class="is-preload">
+
+   <a name="top"></a>
+
+   <!-- Nav Bar -->
+   <section id="navbar">
+
+      <nav>
+         <div class="navB">
+            <ul>
+               <li><a href="../homepage/index.html">Home</a></li>
+					<li><a href="../directpage/direct.html">PuMP Direct</a></li>
+					<li><a href="../aboutuspage/aboutus.html">About Us</a></li>
+					<li><a href="../whatshappeningpage/index.html">Events</a></li>
+					<li><a href="../upcomingprojectspage/upcoming.html">Resources</a></li>
+					<li><a href="../partnerspage/partners.html">Partners</a></li>
+               <li><a href="../contactuspage/contact.html">Contact Us</a></li>
+               <li><a class="active" href="../digestPage/digest.html">PuMP Digest</a></li>
+            </ul>
+         </div>
+      </nav>
+   </section>
+
+   <!-- Header -->
+   <section id="blog-header" class="background-img">
+      <div class="blog-inner">
+         <h1>PuMP Digest</h1>
+         <i aria-hidden="true" class="far fa-comment-alt"></i>
+         <p>Advice About Interview Dos and Don’ts, Medical School Tips, Time Management Skills and Careers in Health
+            Sciences. All
+            under one roof!</p>
+      </div>
+   </section>
+
+   <!-- Blogs -->
+   <section id="blog-section">
+      <div class="blog-posts">
+         <ul class="blog-items">
+         </ul>
+      </div>
+   </section>
+
+   <!-- Footer -->
+   <section id="footer">
+      <ul class="icons">
+         <li><a href="https://www.facebook.com/pumprofessionals/" class="icon brands alt fa-facebook-f"><span
+                  class="label">Facebook</span></a></li>
+         <li><a href="https://www.instagram.com/pumpprofessionals/" class="icon brands alt fa-instagram"><span
+                  class="label">Instagram</span></a></li>
+      </ul>
+      <ul class="copyright">
+         <li>&copy; PuMP Canada</li>
+         <li>© 2020 Prospective Medical Professionals</a></li>
+      </ul>
+   </section>
+
+   <!-- Scripts -->
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/jquery.scrolly.min.js"></script>
+   <script src="assets/js/browser.min.js"></script>
+   <script src="assets/js/breakpoints.min.js"></script>
+   <script src="assets/js/util.js"></script>
+   <script src="assets/js/main.js"></script>
+   <script>
+      // Replace this json variable with the json object that will link to the backend
+      var json = {
+         "items": [
+            {
+               "title": "sample 1",
+               "author": "author 1",
+               "img": "http://ctt.trains.com/sitefiles/images/no-preview-available.png",
+               "date": "date",
+               "content": "Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text"
+            },
+            {
+               "title": "sample 2",
+               "author": "author 2",
+               "img": "http://ctt.trains.com/sitefiles/images/no-preview-available.png",
+               "date": "date",
+               "content": "as cupiditat..."
+            },
+            {
+               "title": "sample 3",
+               "author": "author 3",
+               "img": "http://ctt.trains.com/sitefiles/images/no-preview-available.png",
+               "date": "date",
+               "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Repudiandae ad perferendis corrupti laboriosam illo, facilis perspiciatis, reiciendis culpa voluptas cupiditate, iusto sequi.Labore, nam consectetur quasi ut..."
+            },
+            {
+               "title": "sample 4",
+               "author": "author 4",
+               "img": "http://ctt.trains.com/sitefiles/images/no-preview-available.png",
+               "date": "date",
+               "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Repudiandae ad perferendis corrupti laboriosam illo, facilis perspiciatis, reiciendis culpa voluptas cupiditate, iusto sequi.Labore, nam consectetur quasi ut..."
+            },
+            {
+               "title": "sample 5",
+               "author": "author 5",
+               "img": "http://ctt.trains.com/sitefiles/images/no-preview-available.png",
+               "date": "date",
+               "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Repudiandae ad perferendis corrupti laboriosam illo, facilis perspiciatis, reiciendis culpa voluptas cupiditate, iusto sequi.Labore, nam consectetur quasi ut..."
+            },
+            {
+               "title": "sample 6",
+               "author": "author 6",
+               "img": "http://ctt.trains.com/sitefiles/images/no-preview-available.png",
+               "date": "date",
+               "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Repudiandae ad perferendis corrupti laboriosam illo, facilis perspiciatis, reiciendis culpa voluptas cupiditate, iusto sequi.Labore, nam consectetur quasi ut..."
+            }
+         ]
+      };
+      var blogs = document.getElementsByClassName("blog-items")[0];
+      var items = json.items;
+      for (var i = 0; i < items.length; i++) {
+         //creates a div and li for a single blog box
+         var containerLi = document.createElement("li");
+         containerLi.id = items[i].title;
+         containerLi.className = "blog-item";
+         //create an a tag and a scrolly jquery class to it
+         var containerA = document.createElement("a");
+         containerA.className = "blog-link scrolly";
+         containerA.href = `#${containerLi.id}`;
+         //create a div for text container
+         var textContainerDiv = document.createElement("div");
+         textContainerDiv.className = "blog-text";
+         //create the title of the blog
+         var h1 = document.createElement("h1");
+         h1.className = "title";
+         h1.innerHTML = items[i].title;
+         textContainerDiv.appendChild(h1);
+         //create the authot text of the blog post
+         var h2 = document.createElement("h2");
+         h2.className = "author";
+         h2.innerHTML = items[i].author;
+         textContainerDiv.appendChild(h2);
+         //create the date text of the blog post
+         var h2 = document.createElement("h2");
+         h2.className = "date";
+         h2.innerHTML = items[i].date;
+         textContainerDiv.appendChild(h2);
+         var br = document.createElement("span");
+         br.className = "br";
+         textContainerDiv.appendChild(br);
+         //create the content text of the blog post
+         var p = document.createElement("p");
+         p.className = "content";
+         p.innerHTML = items[i].content;
+         textContainerDiv.appendChild(p);
+         //insert the image link of the blog post, this is wrapped in a figure tag
+         containerA.appendChild(textContainerDiv);
+         var figure = document.createElement("figure");
+         figure.className = "image-wrap";
+         var img = document.createElement("img");
+         img.className = "image";
+         img.src = items[i].img;
+         figure.appendChild(img);
+         containerA.appendChild(figure);
+         //append the the single-blog-post div into the blog-posts div
+         containerLi.appendChild(containerA);
+         blogs.appendChild(containerLi);
+      }
+   </script>
+
+</body>
+
+</html>

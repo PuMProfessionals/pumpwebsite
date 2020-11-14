@@ -21,6 +21,13 @@ app.use(cors())
 app.use(passport.initialize())
 require('./config/passport-config')
 
+app.use('/', (req, res, next)=>{
+    if(req.path=="/") res.redirect('homepage')
+    else next()
+})
+
+app.use('/', express.static('../client'))
+
 const DigestRouter = require('./routes/Digest')
 app.use('/api/digest', DigestRouter)
 
@@ -29,5 +36,5 @@ app.use('/api/blog', BlogRouter)
 
 
 app.listen(port, ()=>{
-    console.log('Server running')
+    console.log('Server running on: '+port)
 })

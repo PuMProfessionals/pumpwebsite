@@ -1,11 +1,12 @@
 const express = require('express')
+const app = express()
 const router = express.Router()
 const passport = require('passport')
 
 let blogArticle = require('../models/blog_model')
 
 app.use(passport.initialize())
-require('./config/passport-config')
+require('../config/passport-config')
 
 router.route('/getArticles').get((req, res)=>{
     blogArticle.find({_id: req.params._id, Title: req.params.title, Author: req.params.author, Date: req.params.date})
