@@ -3,10 +3,10 @@ const app = express()
 const router = express.Router()
 const passport = require('passport')
 
-let digestEntry = require('../models/digest_Model')
+let digestEntry = require('./models/digest_Model')
 
 app.use(passport.initialize())
-require('../config/passport-config')
+require('./config/passport-config')
 
 router.route('/getOpps').get((req, res)=>{
     digestEntry.find({_id: req.params._id, Title: req.params.title, Author: req.params.author, Location: req.params.location})

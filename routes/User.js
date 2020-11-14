@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-let User = require('./userModel')
+let User = require('./models/user_Model')
 
 //Handle user login
 router.route('/login').post((req, res)=>{
