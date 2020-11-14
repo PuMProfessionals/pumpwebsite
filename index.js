@@ -25,7 +25,7 @@ app.use('/', (req, res, next)=>{
     else next()
 })
 
-app.use('/', express.static('../client'))
+app.use('/', express.static('./client'))
 
 const DigestRouter = require('./routes/Digest')
 app.use('/api/digest', DigestRouter)
