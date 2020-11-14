@@ -14,7 +14,6 @@ const conn = mongoose.connection
 conn.once('open', ()=>{
     console.log("MongoDB Connected!")
 })
-.catch(err => console.log(err))
 
 app.use(express.json())
 app.use(cors())
