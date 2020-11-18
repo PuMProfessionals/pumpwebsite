@@ -332,6 +332,7 @@
             if (json.Title) alert("Success!")
             else alert("Something went wrong, please try again and ensure everything is formatted right. Contact the tech team if errors persist.")
          })
+         .catch(err=> alert("Image too large, choose a smaller one"))
       })
 
       $("#submitnewoppbtn").click(()=>{
@@ -355,6 +356,7 @@
             if (json.Title) alert("Success!")
             else alert("Something went wrong, please try again and ensure everything is formatted right. Contact the tech team if errors persist.")
          })
+         .catch(err => alert(err))
       })
 
       $("#delarticlebtn").click(()=>{
@@ -375,6 +377,7 @@
             if (text != "Success!") alert("Success!")
             else alert("Something went wrong, please try again and ensure everything is formatted right. Contact the tech team if errors persist.")
          })
+         .catch(err => alert(err))
       })
 
       $("#deloppbtn").click(()=>{
@@ -395,6 +398,7 @@
             if (text != "") alert("Success!")
             else alert("Something went wrong, please try again and ensure everything is formatted right. Contact the tech team if errors persist.")
          })
+         .catch(err => alert(err))
       })
 
 
