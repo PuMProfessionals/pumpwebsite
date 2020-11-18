@@ -90,7 +90,6 @@
                <input type="password" id="signup-pass" />
                <label for="signup-key">Signup Key (Ask a PuMP Exec if you don't know)</label>
                <input type="password" id="signup-key" />
-               <button type="button" id="cancelbtn">Login</button>
                <button type="button" id="createbtn">Create New User</button>
             </form>
          </div>
@@ -256,6 +255,8 @@
 
       //Activeate when new account is submitted
       $("#createbtn").click((event)=>{
+         user=$('#signup-user').val()
+         pass=$("#signup-pass").val()
          fetch(window.location.origin+"/api/user/newUser", {
             method: 'POST',
             headers: {
@@ -273,7 +274,7 @@
          .then(json => {
             if (json.success)
             {
-               login($("#signup-user").val(), $("signup-pass").val())
+               login(user, pass)
             }
             else {
                alert(json.message)
