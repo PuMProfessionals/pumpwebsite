@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   <title>Prospective Medical Professionals</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+   <meta http-equiv="refresh" content="30">
+   <link rel="stylesheet" href="assets/css/main.css" />
+   <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+   <link rel="icon" href="images/Icon@1000px.png">
+   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+<body class="is-preload">
+
+   <a name="top"></a>
+
+   <!-- Nav Bar -->
+   <section id="navbar">
+
+      <nav>
+         <div class="navB">
+            <ul>
+               <li><a href="../homepage/index.html">Home</a></li>
+					<li><a href="../directpage/direct.html">PuMP Direct</a></li>
+					<li><a href="../aboutuspage/aboutus.html">About Us</a></li>
+					<li><a href="../whatshappeningpage/index.html">Events</a></li>
+					<li><a href="../upcomingprojectspage/upcoming.html">Resources</a></li>
+					<li><a href="../partnerspage/partners.html">Partners</a></li>
+               <li><a href="../contactuspage/contact.html">Contact Us</a></li>
+               <li><a href="../digestPage/digest.html">PuMP Digest</a></li>
+               <li><a class="active" href="../admin/admin.html">Admin Login</a></li>
+            </ul>
+         </div>
+      </nav>
+   </section>
+
+ 
+
+   <!-- Header -->
+   <section id="blog-header" class="background-img">
+      <div class="blog-inner">
+         <h1>Admin Page</h1>
+        
+         <p>Welcome to the PuMP Admin Page. Here you can add or remove new blog articles, PuMP Digest opportunities, and whatever else
+            the fantastic tech team can cook up for you! Feel free to ask one of us for a walkthrough. 
+
+            Remember, this page is ONLY for PuMP Staff.
+         </p>
+      </div>
+   </section>
+
+   <section id="main">
+      <button id="newarticlebtn">Create New Article</button>
+      <button id="newoppbtn">Create New PuMP Direct Entry</button>
+      <button id="delarticleopen">Delete a Article</button>
+      <button id="deloppopen">Delete a PuMP Direct Entry</button>
+   </section>
+
+   <!-- Login -->
+   <section id="login">
+      <div id="loginModal" class="modal">
+         <div id="loginForm" class="modal-content">
+            <form id="admin-login">
+               <label for="user">Username: </label>
+               <input type="text" id="user" />
+               <label for="pass">Password: </label>
+               <input type="password" id="pass" />
+               <button type="button" id="loginbtn">Login</button>
+               <button type="button" id="signupbtn">New User</button>
+            </form>
+         </div>
+      </div>
+   </section>
+
+   <!--Signup-->
+   <section id="signup">
+      <div id="signupModal" class="modal">
+         <div id="signupForm" class="modal-content">
+            <form id="admin-signup">
+               <label for="signup-user">New Username: </label>
+               <input type="text" id="signup-user" />
+               <label for="signup-pass">New Password: </label>
+               <input type="password" id="signup-pass" />
+               <label for="signup-key">Signup Key (Ask a PuMP Exec if you don't know)</label>
+               <input type="password" id="signup-key" />
+               <button type="button" id="cancelbtn">Login</button>
+               <button type="button" id="createbtn">Create New User</button>
+            </form>
+         </div>
+      </div>
+   </section>
+   <!--New Article-->
+   <section id="newArticle">
+      <div id="newarticleModal" class="modal">
+         <div id="newarticleForm" class="modal-content">
+            <label for="author">Article Author: </label>
+            <input type="text" id="author" />
+            <label for="title">Article Title: </label>
+            <input type="text" id="title">
+            <label for="date">Publishing Date (DD/MM/YYYY): </label>
+            <input type="text" id="date" />
+            <label for="content">Content: </label>
+            <textarea id="content"></textarea>
+            <label for="image">Image upload: </label>
+            <input type="file" id="image">
+            <button type="button" id="submitnewbtn">Submit New Article</button>
+         </div>
+      </div>
+   </section>
+   <!--New PuMP Direct Entry-->
+   <section id="newDirect">
+      <div id="newdirectModal" class="modal">
+         <div id="newdirectForm" class="modal-content">
+          
+            <label for="opptitle">Opportunity Title: </label>
+            <input type="text" id="opptitle">
+            <label for="opplocation">Opportunity Location: </label>
+            <input type="text" id="opplocation" />
+            <label for="opporg">Opportunity Organization: </label>
+            <input type="text" id="opporg" />
+            <label for="oppcontent">Opportunity Description: </label>
+            <textarea id="oppcontent"></textarea>
+            <button type="button" id="submitnewoppbtn">Submit New Opportunity</button>
+         </div>
+      </div>
+   </section>
+
+   <section id="delArticle">
+      <div id="delarticleModal" class="modal">
+         <div id="deletearticleForm" class="modal-content">
+            <label for="delarticleatitle">Enter the name of the atricle to be deleted <b>exactly</b> as it shows on the site.</label>
+            <input type="text" id="delarticletitle" />
+            <button type="button" id="delarticlebtn">Delete Article</button>
+         </div>
+      </div>
+   </section>
+
+   <section id="delOpp">
+      <div id="deloppModal" class="modal">
+         <div id="deleteoppForm" class="modal-content">
+            <label for="delopptitle">Enter the name of the entry to be deleted <b>exactly</b> as it shows on the site.</label>
+            <input type="text" id="delopptitle" />
+            <button type="button" id="deloppbtn">Delete Entry</button>
+         </div>
+      </div>
+   </section>
+
+
+   <!-- Footer -->
+   <section id="footer">
+      <ul class="icons">
+         <li><a href="https://www.facebook.com/pumprofessionals/" class="icon brands alt fa-facebook-f"><span
+                  class="label">Facebook</span></a></li>
+         <li><a href="https://www.instagram.com/pumpprofessionals/" class="icon brands alt fa-instagram"><span
+                  class="label">Instagram</span></a></li>
+      </ul>
+      <ul class="copyright">
+         <li>&copy; PuMP Canada</li>
+         <li>© 2020 Prospective Medical Professionals</a></li>
+      </ul>
+   </section>
+
+   <!-- Scripts -->
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/jquery.scrolly.min.js"></script>
+   <script src="assets/js/browser.min.js"></script>
+   <script src="assets/js/breakpoints.min.js"></script>
+   <script src="assets/js/util.js"></script>
+   <script src="assets/js/main.js"></script>
+   <script>
+      //Get JWT token, used for authentication
+      var JWT = sessionStorage.getItem("JWT")
+      //Get modals
+      var modal = document.getElementById("loginModal")
+      var signmodal = document.getElementById("signupModal")
+      var newArticleModal = document.getElementById("newarticleModal")
+      var newDirectModal = document.getElementById("newdirectModal")
+      var delArticleModal = document.getElementById("delarticleModal")
+      var delOppModal = document.getElementById("deloppModal")
+
+      //Check for auth token, if no token, open login
+      if (JWT==null)
+      {
+         modal.style.display="block"
+         signmodal.style.display = "none"
+      }
+      //if auth token present, show the admin display
+      else {
+         modal.style.display="none"
+         signmodal.style.display = "none"
+      }
+
+      //function to convert uploaded images to base64
+      function toBase64 (file) {
+         return new Promise ((resolve, reject)=>{
+            var reader = new FileReader()
+            var baseString
+            reader.onloadend = () => {
+            baseString = reader.result
+          }
+          reader.readAsDataURL(file)
+          reader.onload = () => {
+             resolve(reader.result)
+          }
+         })
+         
+      }
+
+      //function to handle login
+      function login(user, pass) {
+         fetch(window.location.origin+"/api/user/login", {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(
+               {
+               user: user,
+               pass: pass
+            }
+            )
+         })
+         .then(res=>res.json())
+         .then(json=> {
+            if (json.success) {
+               alert("Login succesful!")
+               JWT = json.JWT
+               sessionStorage.setItem("JWT", json.JWT)
+               modal.style.display="none"
+            }
+            else {
+               alert(json.message)
+            }
+         })
+      }
+
+      //Activated when "login" button is pressed
+      $('#loginbtn').click((event)=>{
+         
+        login($("#user").val(), $("#pass").val())
+      
+      })
+
+      //Activated when "Create new account" button is placed
+      $('#signupbtn').click((event)=>{
+         modal.style.display = "none"
+        signmodal.style.display = "block" 
+      })
+
+      //Activeate when new account is submitted
+      $("#createbtn").click((event)=>{
+         fetch(window.location.origin+"/api/user/newUser", {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(
+               {
+               user: $('#signup-user').val(),
+               pass: $("#signup-pass").val(),
+               key: $("#signup-key").val()
+            }
+            )
+         })
+         .then(res => res.json())
+         .then(json => {
+            if (json.success)
+            {
+               login($("#signup-user").val(), $("signup-pass").val())
+            }
+            else {
+               alert(json.message)
+            }
+         })
+      })
+
+      $("#newarticlebtn").click(()=>newArticleModal.style.display="block")
+      $("#newoppbtn").click(()=>newDirectModal.style.display="block")
+      $("#delarticleopen").click(()=>delArticleModal.style.display="block")
+      $("#deloppopen").click(()=>delOppModal.style.display="block")
+
+      window.onclick = (event) => {
+         if (event.target ==newArticleModal)
+         {
+            newArticleModal.style.display = "none"
+         }
+         if (event.target ==newDirectModal)
+         {
+            newDirectModal.style.display = "none"
+         }
+         if (event.target ==delArticleModal)
+         {
+            delArticleModal.style.display = "none"
+         }
+         if (event.target ==delOppModal)
+         {
+            delOppModal.style.display = "none"
+         }
+      }
+      
+    
+
+      $("#submitnewbtn").click(async ()=>{
+         if (typeof(document.getElementById('image').files[0])!='undefined') var imagefile = await toBase64(document.getElementById('image').files[0])
+         
+         fetch(window.location.origin+"/api/blog/addArticle", {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+               'Authorization': JWT
+            },
+            body: JSON.stringify(
+               {
+               author: $("#author").val(),
+               title: $("#title").val(),
+               date: $("#date").val(),
+               content: $("#content").val(),
+               image: imagefile
+            }
+            )
+         })
+         .then(res => res.json())
+         .then(json => {
+            if (json.Title) alert("Success!")
+            else alert("Something went wrong, please try again and ensure everything is formatted right. Contact the tech team if errors persist.")
+         })
+      })
+
+      $("#submitnewoppbtn").click(()=>{
+         fetch(window.location.origin+"/api/digest/addOpps", {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+               'Authorization': JWT
+            },
+            body: JSON.stringify(
+               {
+               title: $("#opptitle").val(),
+               org: $("#opporg").val(),
+               location: $("#opplocation").val(),
+               description: $("#oppcontent").val(),
+            }
+            )
+         })
+         .then(res => res.json())
+         .then(json => {
+            if (json.Title) alert("Success!")
+            else alert("Something went wrong, please try again and ensure everything is formatted right. Contact the tech team if errors persist.")
+         })
+      })
+
+      $("#delarticlebtn").click(()=>{
+         fetch(window.location.origin+"/api/blog/deleteArticle", {
+            method: 'DELETE',
+            headers: {
+               'Content-Type': 'application/json',
+               'Authorization': JWT
+            },
+            body: JSON.stringify(
+               {
+               title: $("#delarticletitle").val(),
+            }
+            )
+         })
+         .then(res => res.text())
+         .then(text => {
+            if (text != "Success!") alert("Success!")
+            else alert("Something went wrong, please try again and ensure everything is formatted right. Contact the tech team if errors persist.")
+         })
+      })
+
+      $("#deloppbtn").click(()=>{
+         fetch(window.location.origin+"/api/digest/deleteOpps", {
+            method: 'DELETE',
+            headers: {
+               'Content-Type': 'application/json',
+               'Authorization': JWT
+            },
+            body: JSON.stringify(
+               {
+               title: $("#delopptitle").val(),
+            }
+            )
+         })
+         .then(res => res.text())
+         .then(text => {
+            if (text != "") alert("Success!")
+            else alert("Something went wrong, please try again and ensure everything is formatted right. Contact the tech team if errors persist.")
+         })
+      })
+
+
+
+   </script>
+
+</body>
+
+</html>

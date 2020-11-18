@@ -11,7 +11,8 @@ opts.secretOrKey = process.env.PRIVATE_KEY;
 
 passport.use('jwt', new JWTStrategy(opts, (jwt_payload, done) => {
 
-    User.findOne({user: jwt_payload.id})
+    console.log(jwt_payload)
+    User.findOne({user: jwt_payload})
     .then(user => {
         if(user)
         {

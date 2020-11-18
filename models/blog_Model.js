@@ -10,7 +10,7 @@ const blogSchema = new Schema(
         Title: stringParams,
         Date: stringParams,
         Content: stringParams, //This is until we figure out how to actually store rich text, may or may not use string.
-        Image: Buffer //Base-64 encoded string
+        Image: String //Base-64 encoded string
     }
 )
 
