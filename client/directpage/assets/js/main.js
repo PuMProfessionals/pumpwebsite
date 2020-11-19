@@ -31,31 +31,24 @@
 (function($) {
 
 	const tbody = $("#table1 tbody")
-
-	const data = [
-		{
-			Title: "STEM Fellowship",
-			Author: "Shrinjay M",
-			Location: "Toronto, ON",
-			Description: "A Research Internship."
-		},
-		{
-			Title: "OMS",
-			Author: "Shrinjay M",
-
-			Location: "Toronto, ON",
-			Description: "Medical Conference"
-		}
-	]
-
 	
+	var data;
 
+
+	fetch(window.location.origin+"/api/digest/getOpps")
+	.then(res => res.json())
+	.then(json => {
+		data = json.digestEntries
+
+		
 	for (var i=0; i<data.length; i++)
 	{
-		var newRow = "<tr class='dataRow'><td>"+data[i].Title+"</td><td>"+data[i].Author+"</td><td>"+data[i].Location+"</td><td>"+data[i].Description+"</td></tr>"
+		var newRow = "<tr class='dataRow'><td>"+data[i].Title+"</td><td>"+data[i].Organization+"</td><td>"+data[i].Location+"</td><td>"+data[i].Description+"</td></tr>"
 		console.log(data[i])
 		 $("#table1 tbody").append(newRow)
 	}
+	})
+
 
 
 

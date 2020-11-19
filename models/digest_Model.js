@@ -6,8 +6,7 @@ const stringParams = {type: String, required: true}
 
 const digestSchema = new Schema ({
     Title: stringParams, 
-    Author: stringParams, 
-    Image: Buffer, 
+    Organization: stringParams, 
     Location: stringParams, 
     Description: stringParams
 })

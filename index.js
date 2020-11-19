@@ -33,6 +33,8 @@ app.use('/api/digest', DigestRouter)
 const BlogRouter = require('./routes/Blog')
 app.use('/api/blog', BlogRouter)
 
+const UserRouter = require('./routes/User')
+app.use('/api/user', UserRouter)
 
 app.listen(port, ()=>{
     console.log('Server running on: '+port)

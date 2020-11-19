@@ -9,8 +9,8 @@ app.use(passport.initialize())
 require('../config/passport-config')
 
 router.route('/getArticles').get((req, res)=>{
-    blogArticle.find({_id: req.params._id, Title: req.params.title, Author: req.params.author, Date: req.params.date})
-    .then(blogArticles => res.json(blogArticles))
+    blogArticle.find()
+    .then(blogArticles => res.json({blogArticles}))
     .catch(err => res.json(err))
 })
 
@@ -19,13 +19,14 @@ router.route('/addArticle').post(passport.authenticate('jwt', {session: false}),
     var newArticle = new blogArticle({
         Title: req.body.title,
         Author: req.body.author,
+        Date: req.body.date,
         Image: req.body.image,
-        Content: req.body.Content
+        Content: req.body.content
     })
 
     newArticle.save()
     .then(newArticle => res.json(newArticle))
-    .catch(err => res,json(err))
+    .catch(err => res.json(err))
 })
 
 router.route('/updateArticle').put(passport.authenticate('jwt', {session: false}), (req, res)=>{
@@ -41,8 +42,8 @@ router.route('/updateArticle').put(passport.authenticate('jwt', {session: false}
 router.route('/deleteArticle').delete(passport.authenticate('jwt', {session: false}), (req, res)=>{
     const id = req.body._id
 
-    blogArticle.findOneAndDelete({_id: id})
-    .then(data => res.send("Success!: " + data))
+    blogArticle.findOneAndDelete({Title: req.body.title})
+    .then(data => res.send(data))
     .catch(err => res.json(err))
 })
 
